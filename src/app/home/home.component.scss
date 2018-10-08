@@ -1,0 +1,86 @@
+@import "../theme/variables.scss";
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+.search-box {
+
+  background-color: $color-home-box;
+  height: 90vh;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  p {
+    color: $color-home-text;
+  }
+
+  .row {
+    width: auto;
+
+    .title {
+      font-size: 2.5em;
+    }
+
+    .tag-primary {
+      font-size: 1.5em;
+    }
+
+    .tag-secondary {
+      font-size: 1em;
+    }
+
+    .inputs {
+
+      * {
+        box-sizing: border-box;
+      }
+
+      margin: auto;
+      max-width: 70%;
+
+
+      input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid white;
+        float: left;
+        width: 90%;
+        //background: #f1f1f1;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      button {
+        float: left;
+        width: 10%;
+        padding: 10px;
+        background: black;
+        color: white;
+        font-size: 1.063em;
+        border: 1px solid black;
+        border-left: none;
+        cursor: pointer;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      button:hover {
+        background: grey;
+      }
+
+      form::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+    }
+  }
+
+}
