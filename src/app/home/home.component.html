@@ -8,9 +8,9 @@
       <input type="submit"> -->
 
     <div class="inputs">
-      <form>
-        <input type="text" placeholder="What are you looking for?" name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
+      <form #searchForm="ngForm">
+        <input type="text" [(ngModel)]="text" placeholder="What are you looking for?" name="search" required>
+        <button type="submit" [disabled]="!searchForm.form.valid" routerLink="/search/{{text}}"><i class="fa fa-search"></i></button>
       </form>
     </div>
 
