@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.data.trendinghGif().subscribe((res: any) => {
       this.images = res.data;
       console.log(this.images);

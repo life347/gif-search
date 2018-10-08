@@ -31,3 +31,65 @@
 <main class="cards">
   <img *ngFor="let image of images" src="{{image.images.downsized.url}}" alt="{{image.title}}" title="{{image.title}}">
 </main>
+
+<div class="bottom-nav">
+
+  <div class="left">
+    <div class="row">
+      <p>Sign up and<br>get free content every week.</p>
+      <input type="text" placeholder="Enter your email...">
+      <br>
+      <button>Sign Up</button>
+    </div>
+  </div>
+
+
+  <p class="title">Browse by categories</p>
+
+
+  <div class="right">
+
+    <div class="col">
+      <p class="link" routerLink="">Graphics</p>
+      <p class="link" routerLink="">PSDs</p>
+      <p class="link" routerLink="">Icons</p>
+      <p class="link" routerLink="">Templates</p>
+      <p class="link" routerLink="">Themes</p>
+    </div>
+
+    <div class="col">
+      <p class="link" routerLink="">Addons</p>
+      <p class="link" routerLink="">Fonts</p>
+      <p class="link" routerLink="">Textures</p>
+      <p class="link" routerLink="">Patterns</p>
+      <p class="link" routerLink="">Backgrounds</p>
+    </div>
+
+    <div class="col">
+      <p class="link" routerLink="">Buttons</p>
+      <p class="link" routerLink="">Forms</p>
+      <p class="link" routerLink="">GUI</p>
+      <p class="link" routerLink="">Navigation</p>
+      <p class="link" routerLink="">UI Kits</p>
+    </div>
+
+    <div class="col">
+      <p class="link" routerLink="">Infographics</p>
+      <p class="link" routerLink="">Graphs</p>
+      <p class="link" routerLink="">Logos</p>
+      <p class="link" routerLink="">Vectors</p>
+      <p class="link" routerLink="">Business Cards</p>
+    </div>
+
+    <!-- <div class="links">
+      
+    </div> -->
+
+  </div>
+
+</div>
+
+<div class="footer">
+  <p class="links">Affiliates   /   Contributors   /   Press/Media   /   Careers   /   About   /   Contact</p>
+  <p class="copyright">Copyright © 2018 myCompany All rights reserved.</p>
+</div>
