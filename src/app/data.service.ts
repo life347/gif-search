@@ -12,7 +12,14 @@ export class DataService {
 
   searchGif(keyword) {
 
-    const url = 'https://api.giphy.com/v1/gifs/search?api_key=' + this.ApiKey + '&q=' + keyword + '&limit=8&offset=0&rating=G&lang=en';
+    const url = 'https://api.giphy.com/v1/gifs/search?api_key=' + this.ApiKey + '&q=' + keyword + '&limit=25&offset=0&rating=G&lang=en';
+
+    return this.http.get(url);
+  }
+
+  trendinghGif() {
+
+    const url = 'https://api.giphy.com/v1/gifs/trending?api_key=' + this.ApiKey + '&limit=25&rating=G';
 
     return this.http.get(url);
   }

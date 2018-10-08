@@ -4,13 +4,17 @@
 
     <p class="title">Gif Search</p>
 
-    <!-- <input type="text" placeholder="What are you looking for?">
-      <input type="submit"> -->
-
     <div class="inputs">
-      <form #searchForm="ngForm">
+      <form #searchForm="ngForm" (ngSubmit)="search()">
         <input type="text" [(ngModel)]="text" placeholder="What are you looking for?" name="search" required>
-        <button type="submit" [disabled]="!searchForm.form.valid" routerLink="/search/{{text}}"><i class="fa fa-search"></i></button>
+
+        <!-- Uncomment if search need to open in separate page:
+
+          <button type="submit" [disabled]="!searchForm.form.valid" routerLink="/search/{{text}}"><i class="fa fa-search"></i></button>
+        
+        -->
+
+        <button type="submit" [disabled]="!searchForm.form.valid"><i class="fa fa-search"></i></button>
       </form>
     </div>
 
@@ -21,3 +25,9 @@
   </div>
 
 </div>
+
+<div class="result" id="result"></div>
+
+<main class="cards">
+  <img *ngFor="let image of images" src="{{image.images.downsized.url}}" alt="{{image.title}}" title="{{image.title}}">
+</main>
